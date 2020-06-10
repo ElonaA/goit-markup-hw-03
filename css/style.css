@@ -1,0 +1,230 @@
+/* Цвет основного текста #212121; */
+/* Вторичный цвет текста  #757575;*/
+/* Белый #ffffff  */
+/* Акцент #2196f3; */
+/* Вторичный цвет фона #f5f4fA */
+/* Фон футер #2F303A; */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --text-color: #757575;
+  --primary-title-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --background-footer: #2f303a;
+  --background-icon: #f5f4fa;
+  --background-button: #f5f4fa;
+  --color-button: #212121;
+}
+
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-title-color);
+
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Стили для страницы Студия index.html */
+.list {
+  list-style: none;
+}
+
+/* Logo*/
+.logo,
+.logo-header,
+.logo-footer,
+.logo-color {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--primary-title-color);
+}
+.logo-header {
+  color: var(--accent-color);
+}
+/* Navigation */
+.site-nav .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-title-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+/* Contact*/
+.mail,
+.phone {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+.mail:hover,
+.phone:hover {
+  color: var(--accent-color);
+}
+/* Hero */
+.hero {
+  /* Чтобы отобразить белый текст временно серый фон вместо баннера */
+  background-color: rgba(233, 233, 227, 0.5);
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+button {
+  border: none;
+  outline: none;
+}
+.order-service {
+  --h: 50px;
+  min-width: 200px;
+  padding: 0 32px; /* гарантия отступов при увеличении длинны текста*/
+
+  height: var(--h); /* центрирование одной линии текста по вертикали */
+  line-height: var(--h); /* центрирование одной линии текста по вертикали */
+  /* текст */
+  text-align: center; /* центрирование  по горзонтали */
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  /* цвета */
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+
+  /* украшения   */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+/* Section*/
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.advantages-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.advantages-text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--text-color);
+}
+.advantages-text {
+  color: var(--text-color);
+}
+/*Section About us*/
+
+.title-work {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.14;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  /* Чтобы отобразить белый текст временно серый фон вместо баннера */
+  background-color: rgba(47, 48, 58, 0.8);
+}
+/*Section Our Team*/
+.title-team,
+.text-team {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.section-team .text-team {
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/*Footer*/
+.main-footer {
+  background-color: var(--background-footer);
+}
+.logo-footer,
+.logo-color {
+  color: var(--primary-white-color);
+}
+.logo-color {
+  color: var(--accent-color);
+}
+.addres {
+  color: var(--primary-white-color);
+}
+.mail-footer,
+.phone-footer {
+  color: rgba(255, 255, 255, 0.6);
+}
+.join {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+.copyright {
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Разметка страницы Portfolio */
+
+.portfolio-button {
+  width: auto;
+  height: 38px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--color-button);
+  background: var(--background-button);
+  border-radius: 4px;
+}
+.portfolio-button:hover,
+.portfolio-button:focus {
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+}
+.portfolio-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-title-color);
+}
+.portfolio-subtitle {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+.portfolio-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-white-color);
+  background: rgba(33, 150, 243, 0.9);
+}

@@ -4,8 +4,13 @@
 /* Акцент #2196f3; */
 /* Вторичный цвет фона #f5f4fA */
 /* Фон футер #2F303A; */
-* {
+html {
   box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 :root {
   --text-color: #757575;
@@ -33,6 +38,16 @@ body {
 /* Стили для страницы Студия index.html */
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
 }
 
 /* Logo*/
@@ -50,7 +65,26 @@ body {
   color: var(--accent-color);
 }
 /* Navigation */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  margin-left: 85px;
+}
+.site-nav .item + .item {
+  margin-left: 40px;
+}
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -65,6 +99,13 @@ body {
   color: var(--accent-color);
 }
 /* Contact*/
+.contact {
+  margin-left: auto;
+}
+
+.contact .mail + .phone {
+  margin-left: 30px;
+}
 .mail,
 .phone {
   font-weight: 500;
@@ -79,14 +120,16 @@ body {
 }
 /* Hero */
 .hero {
+  text-align: center;
   /* Чтобы отобразить белый текст временно серый фон вместо баннера */
   background-color: rgba(233, 233, 227, 0.5);
 }
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
@@ -110,26 +153,63 @@ button {
   letter-spacing: 0.06em;
   /* цвета */
   color: var(--primary-white-color);
-  background: var(--accent-color);
+  background-color: var(--accent-color);
 
   /* украшения   */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+.order-service:hover,
+.order-service:focus {
+  background-color: #188ce8;
+}
 /* Section*/
+.section-advantages,
+.section-team,
+.section-work {
+  margin-top: 94px;
+}
+.advantages-list .advantages + .advantages,
+.work-list .work + .work,
+.team-list .team + .team {
+  margin-left: 30px;
+}
+.advantages,
+.team {
+  width: 270px;
+}
+.advantages-list,
+.work-list,
+.team-list {
+  display: flex;
+}
 .section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
+.advantages-img {
+  display: block;
+  margin-bottom: 30px;
+  padding: 25px 100px 25px 100px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--background-icon);
+}
 .advantages-title {
+  margin-top: 0px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 .advantages-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 14px;
   line-height: 1.71;
   color: var(--text-color);
@@ -138,8 +218,13 @@ button {
   color: var(--text-color);
 }
 /*Section About us*/
-
+.work {
+  width: 370px;
+}
 .title-work {
+  padding: 27px 82px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 14px;
   text-align: center;
   line-height: 1.14;
@@ -149,6 +234,15 @@ button {
   background-color: rgba(47, 48, 58, 0.8);
 }
 /*Section Our Team*/
+.section-title.team {
+  padding-top: 94px;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+}
+.title-team {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 .title-team,
 .text-team {
   font-weight: 500;
@@ -157,6 +251,7 @@ button {
   text-align: center;
 }
 .section-team .text-team {
+  margin-bottom: 16px;
   font-weight: 400;
   color: var(--text-color);
 }

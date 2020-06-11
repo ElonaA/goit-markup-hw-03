@@ -36,6 +36,9 @@ body {
 }
 
 /* Стили для страницы Студия index.html */
+a {
+  text-decoration: none;
+}
 .list {
   list-style: none;
   padding: 0;
